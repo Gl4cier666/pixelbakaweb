@@ -11,6 +11,7 @@
 
 body{
     margin: 0;
+    
 }
 
 p{
@@ -89,10 +90,17 @@ width: 150px;
     display: flex;
 }
 
+.maincontainer{
+    background-image: url('backswoosh.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .maincontent{
     max-width: 1200px;
     margin: auto;
-    margin-top: 150px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     display: flex;
     flex-direction: column;
 }
@@ -169,7 +177,6 @@ width: 150px;
 }
 
 .footer{
-    margin-top:150px;
     background-color: black;
     height: 150px;
     align-content: end;
@@ -212,11 +219,15 @@ width: 150px;
     padding-bottom: 80px;
 }
 
+.maincontainer{
+    background-image: none;
+}
+
   .maincontent{
     width:auto;
     padding-left: 30px;
     padding-right: 30px;
-    margin-top: 50px;
+    padding-top: 0;
   }
 
   .mcrow{
@@ -315,6 +326,7 @@ nav ul{
 
     </div>
 </div>
+<div class="maincontainer">
 <div class="maincontent">
     <div class="mcrow">
     <div class="lcolm"><p>Originally formed from a group of con-going friends that love Anime, videogames and cosplay, Pixel Baka brings your favorite Anime openings and videogame soundtracks to the main stage! 
@@ -331,12 +343,13 @@ nav ul{
         </div>   
         </div>
 </div>
+</div>
 <div class="footer">
     <div class="social">
         <img style="width: 40px;" src="insta.svg">
         <img style="width: 40px;" src="tiktok.svg">
     </div>
-    <div style="width: 65%; text-align: right;" class="biem"><p style="color: white; padding-right: 10%; font-size: 16px;">info[at]pixel-baka.com</p></div>
+    <div style="width: 50%; text-align: right;" class="biem"><p style="color: white; padding-right: 10%; font-size: 16px;">info[at]pixel-baka.com</p></div>
 </div>
 <div class="footc">
     <div class="copyright">Copyright Pixel Baka © 2024 All Rights Reserved</div>
