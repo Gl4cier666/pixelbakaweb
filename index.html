@@ -16,6 +16,7 @@ body{
 p{
     font-family: "IBM Plex Sans", sans-serif; 
     color: #1E1E1E;
+    font-size: 18px;
     
 }
 
@@ -24,11 +25,12 @@ p{
     background-color: white;
     box-shadow: 0px 16px 25px -28px black;
     position: fixed;
+    z-index: 999;
     width: 100%;
 }
 
 #header{
-    width: 1200px;
+    max-width: 1200px;
     height: 90px;
     margin: auto;
     display: flex;
@@ -36,6 +38,7 @@ p{
     align-items: center;
     font-family: "IBM Plex Sans", sans-serif; 
     font-weight: 500;
+    font-size: 18px;
     color: #1E1E1E;
 }
 
@@ -44,9 +47,27 @@ nav{
 }
 
 nav ul {
-  list-style-type: none;
+
   display: flex;
   justify-content: space-around;
+  list-style-type: none;
+}
+
+#mobilenav{
+    background-color: white;
+    padding-top: 90px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 16px 25px -28px black;
+}
+
+#mobilenav ul{
+    list-style-type: none;
+    font-size: 18px;
+    font-family: "IBM Plex Sans", sans-serif; 
+    font-weight: 500;
+    line-height: 3;
+    color: #1E1E1E;
 }
 
 .logo{
@@ -57,6 +78,11 @@ nav ul {
 width: 150px;     
 }
 
+#hmenu{
+    width: 40px;
+    display: none;
+}
+
 .hero{
     padding-top: 90px;
     height: 540px;
@@ -64,7 +90,7 @@ width: 150px;
 }
 
 .maincontent{
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     margin-top: 150px;
     display: flex;
@@ -82,6 +108,40 @@ width: 150px;
 .rcolh{
     width:50%;
     background-color: black;
+}
+
+.rcolhcontent h2{
+    font-size: 3rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    margin-bottom: 0px;
+}
+
+.rcolhcontent h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 0;
+    margin-top: 50px;
+}
+
+.rcolhcontent h4{
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 0;
 }
 
 .mcrow{
@@ -109,9 +169,23 @@ width: 150px;
 }
 
 .footer{
+    margin-top:150px;
     background-color: black;
     height: 150px;
     align-content: end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footc{
+    background-color: black;
+    align-content: end;
+    text-align: center;
+}
+
+.social{
+    padding-left: 10%;
 }
 
 .copyright{
@@ -121,6 +195,84 @@ width: 150px;
     text-align: center;
     padding-bottom: 16px;
 }
+
+@media only screen and (max-width: 1024px) {
+  /* For mobile phones: */
+
+.hero{
+    flex-direction: column;
+}
+
+.lcolh{
+    width: 100%;
+}
+
+.rcolh{
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+  .maincontent{
+    width:auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .mcrow{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .mrev{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lcolm{
+    width: 100%;
+
+  }
+
+  .rcolm{
+    width: 100%;
+
+  }
+
+  .spacer{
+    display: none;
+  }
+
+
+  .rcolm img{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+}
+
+#header{
+    width: 100%;
+}
+
+nav ul{
+     display: none;
+}
+
+#hmenu{
+    display: block;
+    float: right;
+    margin-right: 30px;
+}
+
+.rcolhcontent h2, .rcolhcontent h3, .rcolhcontent h4{
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+}
+
 
 </style>
 </head>
@@ -137,12 +289,30 @@ width: 150px;
         <li>Press</li>
         <li>Contact Us</li>
       </ul>
+      <img id="hmenu" src="hmenu.svg" onclick="mobileMenuFunc()">
     </nav>
     </div>
+</div>
+<div id="mobilenav" style="display: none;">
+ <ul>
+    <li>About</li>
+    <li>Calendar</li>
+    <li>Press</li>
+    <li>Contact Us</li>
+ </ul>
 </div>  
 <div class="hero">
     <div class="lcolh">test</div>
-    <div class="rcolh">test2</div>
+    <div class="rcolh">
+        <div class="rcolhcontent">
+            <h2>Upcoming Shows</h2>
+            <h3>Monsoon Mayhem</h3>
+            <h4>December 20 2024 - Las Vegas, NV</h4>
+            <h3>Sin City Anime 2024</h3>
+            <h4 style="color: #CF8BD5;">Complete</h4>
+        </div>
+
+    </div>
 </div>
 <div class="maincontent">
     <div class="mcrow">
@@ -153,17 +323,31 @@ width: 150px;
     </div>   
     </div>
     <div class="spacer"></div>
-    <div class="mcrow">
+    <div class="mcrow mrev">
         <div class="rcolm"><img src="bandp2.jpg"></div>
         <div class="lcolm">
             <p>Pixel Baka is now booking for Anime Conventions, Videogame Conventions, and “Nerd culture” conventions as well as events that relate to J-Fashion, J-Rock, Visual Kei, Cosplay, Otaku culture, Retro and Modern gaming, as well as Comic and Sci-fi gatherings. Please contact at us if you’d like us to perform at your next event or if you are a fan request us as a guest of honor!</p>
         </div>   
         </div>
 </div>
-<div class="spacer"></div>
 <div class="footer">
-    <div class="social"></div>
-    <div class="biem"></div>
+    <div class="social">
+        <img style="width: 40px;" src="insta.svg">
+        <img style="width: 40px;" src="tiktok.svg">
+    </div>
+    <div style="width: 50%; text-align: right;" class="biem"><p style="color: white; padding-right: 10%; font-size: 16px;">info[at]pixel-baka.com</p></div>
+</div>
+<div class="footc">
     <div class="copyright">Copyright Pixel Baka © 2024 All Rights Reserved</div>
 </div>
+<script type="text/javascript">
+function mobileMenuFunc() {
+  var hmenu = document.getElementById("mobilenav");
+  if (hmenu.style.display === "none") {
+    hmenu.style.display = "block";
+  } else {
+    hmenu.style.display = "none";
+  }
+}
+</script>
 </body>
