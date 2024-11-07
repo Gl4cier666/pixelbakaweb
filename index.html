@@ -26,7 +26,7 @@ p{
     background-color: white;
     box-shadow: 0px 16px 25px -28px black;
     position: fixed;
-    z-index: 999;
+    z-index: 1000;
     width: 100%;
 }
 
@@ -60,6 +60,7 @@ nav ul {
     position: fixed;
     width: 100%;
     box-shadow: 0px 16px 25px -28px black;
+    z-index: 999;
 }
 
 #mobilenav ul{
@@ -106,16 +107,24 @@ width: 150px;
 }
 
 .lcolh{
-    width:50%;
-    background-image: url('fastlines.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    height: 540px;
+    position: relative;
+}
+
+.lcolhm{
+    display: none;
+    position: relative;
+}
+
+.overlayvid{
+    position: absolute;
+    z-index: 998;
 }
 
 .rcolh{
-    width:50%;
+    width: 100%;
     background-color: black;
+    z-index: 998;
 }
 
 .rcolhcontent h2{
@@ -125,7 +134,6 @@ width: 150px;
     text-align: right;
     padding-left: 20%;
     padding-right: 20%;
-    padding-top: 5%;
     margin-bottom: 0px;
 }
 
@@ -208,6 +216,7 @@ width: 150px;
 
 .hero{
     flex-direction: column;
+    height: auto;
 }
 
 .lcolh{
@@ -282,9 +291,34 @@ nav ul{
     padding-right: 30px;
 }
 
+.lcolhm{
+    display: block;
+    width:100%;
+}
+
+.overlayvid{
+    display: none;
+}
+
+.lcolh{
+    display: none;
+}
 
 }
 
+
+@media only screen and (max-width: 1800px) {
+    /* Fix hero text wrapping issue */
+    .rcolh h2{
+        font-size: 2rem;
+    }
+    .rcolh h3{
+        font-size: 1.5rem;
+    }
+    .rcolh h4{
+        font-size: 0.8rem;
+    }
+}
 
 </style>
 </head>
@@ -314,7 +348,14 @@ nav ul{
  </ul>
 </div>  
 <div class="hero">
-    <div class="lcolh">test</div>
+    <div class="lcolh">
+        <img class="overlayvid" src="fastlines.svg">
+        <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/u009531cvx.js" async type="module"></script><style>wistia-player[media-id='u009531cvx']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/u009531cvx/swatch'); display: block; filter: blur(5px); }</style> <wistia-player media-id="u009531cvx" style="width: 960px;height: 540px;"></wistia-player>
+        </div>
+        <div class="lcolhm">
+            <img class="overlayvid" src="fastlines.svg">
+            <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/u009531cvx.js" async type="module"></script><style>wistia-player[media-id='u009531cvx']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/u009531cvx/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id="u009531cvx"></wistia-player>
+                    </div>
     <div class="rcolh">
         <div class="rcolhcontent">
             <h2>Upcoming Shows</h2>
