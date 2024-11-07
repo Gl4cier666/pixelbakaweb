@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pixel Baka | Anime Cover Band</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+
+body{
+    margin: 0;
+    
+}
+
+p{
+    font-family: "IBM Plex Sans", sans-serif; 
+    color: #1E1E1E;
+    font-size: 18px;
+    
+}
+
+#navcontainer{
+    margin: auto;
+    background-color: white;
+    box-shadow: 0px 16px 25px -28px black;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
+#header{
+    max-width: 1200px;
+    height: 90px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "IBM Plex Sans", sans-serif; 
+    font-weight: 500;
+    font-size: 18px;
+    color: #1E1E1E;
+}
+
+nav{
+    width: 50%;
+}
+
+nav ul {
+
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+#mobilenav{
+    background-color: white;
+    padding-top: 90px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 16px 25px -28px black;
+    z-index: 999;
+}
+
+#mobilenav ul{
+    list-style-type: none;
+    font-size: 18px;
+    font-family: "IBM Plex Sans", sans-serif; 
+    font-weight: 500;
+    line-height: 3;
+    color: #1E1E1E;
+}
+
+.logo{
+    width: 50%;
+}
+
+.logo img{
+width: 150px;     
+}
+
+#hmenu{
+    width: 40px;
+    display: none;
+}
+
+.hero{
+    padding-top: 90px;
+    height: 200px;
+    display: flex;
+}
+
+.maincontainer{
+    background-image: url('backswoosh.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.maincontent{
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lcolh{
+    height: 540px;
+    position: relative;
+}
+
+.lcolhm{
+    display: none;
+    position: relative;
+}
+
+.overlayvid{
+    position: absolute;
+    z-index: 998;
+}
+
+.rcolh{
+    width: 100%;
+    background-color: black;
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.rcolhcontent h2{
+    font-size: 3rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 0px;
+}
+
+.rcolhcontent h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 0;
+    margin-top: 50px;
+}
+
+.rcolhcontent h4{
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 0;
+}
+
+.mcrow{
+    display: flex;
+    justify-content: center;
+}
+
+.lcolm{
+    width: 50%;
+    align-content: center;
+}
+
+.rcolm{
+    width: 50%;
+    text-align: center;
+    align-content: center;
+}
+
+.rcolm img{
+    width: 85%;
+    box-shadow: 5px 10px 10px 3px #bababa;
+}
+
+.spacer{
+    height: 150px;
+}
+
+.footer{
+    background-color: black;
+    height: 150px;
+    align-content: end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footc{
+    background-color: black;
+    align-content: end;
+    text-align: center;
+}
+
+.social{
+    padding-left: 10%;
+}
+
+.copyright{
+    color: white;
+    font-size: 14px;
+    font-family: "IBM Plex Sans", sans-serif; 
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* For mobile phones: */
+
+.hero{
+    flex-direction: column;
+    height: auto;
+}
+
+.lcolh{
+    width: 100%;
+}
+
+.rcolh{
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.maincontainer{
+    background-image: none;
+}
+
+  .maincontent{
+    width:auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0;
+  }
+
+  .mcrow{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .mrev{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lcolm{
+    width: 100%;
+
+  }
+
+  .rcolm{
+    width: 100%;
+
+  }
+
+  .spacer{
+    display: none;
+  }
+
+
+  .rcolm img{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+}
+
+#header{
+    width: 100%;
+}
+
+nav ul{
+     display: none;
+}
+
+#hmenu{
+    display: block;
+    float: right;
+    margin-right: 30px;
+}
+
+.rcolhcontent h2, .rcolhcontent h3, .rcolhcontent h4{
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.lcolhm{
+    display: block;
+    width:100%;
+}
+
+.overlayvid{
+    display: none;
+}
+
+.lcolh{
+    display: none;
+}
+
+}
+
+
+@media only screen and (max-width: 1800px) {
+    /* Fix hero text wrapping issue */
+    .rcolh h2{
+        font-size: 2rem;
+    }
+    .rcolh h3{
+        font-size: 1.5rem;
+    }
+    .rcolh h4{
+        font-size: 0.8rem;
+    }
+}
+
+</style>
+</head>
+<body>
+  <div id="navcontainer">
+    <div id="header">
+    <div class="logo">
+    <img src="pbtransparent.png">
+    </div>
+    <nav>
+      <ul>
+        <li>About</li>
+        <li>Calendar</li>
+        <li>Press</li>
+        <li>Contact Us</li>
+      </ul>
+      <img id="hmenu" src="hmenu.svg" onclick="mobileMenuFunc()">
+    </nav>
+    </div>
+</div>
+<div id="mobilenav" style="display: none;">
+ <ul>
+    <li>About</li>
+    <li>Calendar</li>
+    <li>Press</li>
+    <li>Contact Us</li>
+ </ul>
+</div>  
+<div class="hero">
+    <div class="rcolh">
+        <div class="rcolhcontent">
+        </div>
+
+    </div>
+</div>
+<div class="maincontainer">
+<div class="maincontent">
+    <div class="mcrow">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqFBTBFEtcFq6sqH4IfLQH0UhZdY83CkrD68pJxxa_B8PSJw/viewform?embedded=true" width="640" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+</div>
+<div class="footer">
+    <div class="social">
+        <img style="width: 40px;" src="insta.svg">
+        <img style="width: 40px;" src="tiktok.svg">
+    </div>
+    <div style="width: 50%; text-align: right;" class="biem"><p style="color: white; padding-right: 10%; font-size: 16px;">info[at]pixel-baka.com</p></div>
+</div>
+<div class="footc">
+    <div class="copyright">Copyright Pixel Baka © 2024 All Rights Reserved</div>
+</div>
+<script type="text/javascript">
+function mobileMenuFunc() {
+  var hmenu = document.getElementById("mobilenav");
+  if (hmenu.style.display === "none") {
+    hmenu.style.display = "block";
+  } else {
+    hmenu.style.display = "none";
+  }
+}
+</script>
+</body>
