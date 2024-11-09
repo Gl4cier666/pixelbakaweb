@@ -9,6 +9,16 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <style>
 
+a {
+
+text-decoration: none;
+color: inherit; 
+}
+
+a:hover{
+    color: #CF8BD5;
+}
+
 body{
     margin: 0;
     
@@ -100,8 +110,8 @@ width: 150px;
 .maincontent{
     max-width: 1200px;
     margin: auto;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
 }
@@ -169,6 +179,21 @@ width: 150px;
     align-content: center;
 }
 
+.lcolm h2{
+    font-family: 'Poppins', sans-serif;
+    color: #00CCB7;
+    font-size: 3rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.lcolm h1{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
 .rcolm{
     width: 50%;
     text-align: center;
@@ -177,11 +202,11 @@ width: 150px;
 
 .rcolm img{
     width: 85%;
-    box-shadow: 5px 10px 10px 3px #bababa;
+    box-shadow: 5px 10px 20px 0px #bababa;
 }
 
 .spacer{
-    height: 150px;
+    height: 80px;
 }
 
 .footer{
@@ -209,6 +234,26 @@ width: 150px;
     font-family: "IBM Plex Sans", sans-serif; 
     text-align: center;
     padding-bottom: 16px;
+}
+
+.ctabtn {
+	background-color:#00CCB7;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:16px 31px;
+	text-decoration:none;
+}
+.ctabtn:hover {
+	background-color:#CF8BD5;
+    color: white;
+}
+.ctabtn:active {
+	position:relative;
+	top:1px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -306,6 +351,8 @@ nav ul{
 
 }
 
+        
+
 
 @media only screen and (max-width: 1800px) {
     /* Fix hero text wrapping issue */
@@ -332,10 +379,10 @@ nav ul{
     </div>
     <nav>
       <ul>
-        <li>About</li>
-        <li>Calendar</li>
-        <li>Press</li>
-        <li>Contact Us</li>
+        <li><a href="about">About</a></li>
+        <li><a href="calendar">Calendar</a></li>
+        <li><a href="press">Press</a></li>
+        <li><a href="contact">Contact Us</a></li>
       </ul>
       <img id="hmenu" src="hmenu.svg" onclick="mobileMenuFunc()">
     </nav>
@@ -343,9 +390,9 @@ nav ul{
 </div>
 <div id="mobilenav" style="display: none;">
  <ul>
-    <li>About</li>
-    <li>Calendar</li>
-    <li>Press</li>
+    <li><a href="about">About</a></li>
+    <li><a href="calendar">Calendar</a></li>
+    <li><a href="press">Press</a></li>
     <li><a href="contact">Contact Us</a></li>
  </ul>
 </div>  
@@ -361,9 +408,9 @@ nav ul{
     <div class="rcolh">
         <div class="rcolhcontent">
             <h2>Upcoming Shows</h2>
-            <h3>Monsoon Mayhem</h3>
+            <h3><a href="https://www.start.gg/tournament/monsoon-mayhem/details">Monsoon Mayhem</a></h3>
             <h4>December 20 2024 - Las Vegas, NV</h4>
-            <h3>Sin City Anime 2024</h3>
+            <h3><a href="https://www.sincityanime.com/">Sin City Anime 2024</a></h3>
             <h4 style="color: #CF8BD5;">Complete</h4>
         </div>
 
@@ -372,7 +419,7 @@ nav ul{
 <div class="maincontainer">
 <div class="maincontent">
     <div class="mcrow">
-    <div class="lcolm"><p>Originally formed from a group of con-going friends that love Anime, videogames and cosplay, Pixel Baka brings your favorite Anime openings and videogame soundtracks to the main stage! 
+    <div class="lcolm"><h2>Pixel Baka</h2><h1>Live Anime & Videogame Music</h1><p>Originally formed from a group of con-going friends that love Anime, videogames and cosplay, Pixel Baka brings your favorite Anime openings and videogame soundtracks to the main stage! 
         Sing along to your favorite Anime songs in their original Japanese language while experiencing full-band rock performances in cosplay. Formed in 2023 Pixel Baka features a full cast of multi instrumentalists and vocalists. Catch a performance to hear music from Naruto, Soul Eater, and more!</p></div>
     <div class="rcolm">
         <img src="bandp1.jpg">
@@ -381,16 +428,17 @@ nav ul{
     <div class="spacer"></div>
     <div class="mcrow mrev">
         <div class="rcolm"><img src="bandp2.jpg"></div>
-        <div class="lcolm">
+        <div class="lcolm"><h2>Now Booking</h2>
             <p>Pixel Baka is now booking for Anime Conventions, Videogame Conventions, and “Nerd culture” conventions as well as events that relate to J-Fashion, J-Rock, Visual Kei, Cosplay, Otaku culture, Retro and Modern gaming, as well as Comic and Sci-fi gatherings. Please contact at us if you’d like us to perform at your next event or if you are a fan request us as a guest of honor!</p>
+            <a href="contact" class="ctabtn">Book Now</a>
         </div>   
         </div>
 </div>
 </div>
 <div class="footer">
     <div class="social">
-        <img style="width: 40px;" src="insta.svg">
-        <img style="width: 40px;" src="tiktok.svg">
+        <a href="https://www.instagram.com/pixelbaka/"><img style="width: 40px;" src="insta.svg"></a>
+        <a href="https://www.tiktok.com/@pixelbaka"><img style="width: 40px;" src="tiktok.svg"></a>
     </div>
     <div style="width: 50%; text-align: right;" class="biem"><p style="color: white; padding-right: 10%; font-size: 16px;">info[at]pixel-baka.com</p></div>
 </div>
